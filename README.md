@@ -3,7 +3,7 @@
 Teste interativo de nível de inglês baseado no **CEFR (Quadro Europeu Comum de Referência para Línguas)**, com interface temática gamer e sistema dinâmico de pontuação.
 
 🔗 **Acesse o projeto online:**  
-https://lucrecioz.github.io/teste-cefr-gaming/
+https://lucrecioz.github.io/test-cefr-gaming/
 
 ---
 
