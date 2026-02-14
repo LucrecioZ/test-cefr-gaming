@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b), 
+                url('./assets/gamepag2.png');
+    
+    background-blend-mode: overlay; 
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #0f172a;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: #60a5fa;
+    font-size: 20px;
+}
+
+section p {
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #6366f1;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background-color: #1e293b;
+    color: white;
+    margin-top: 8px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+#btnEnviar {
+    display: block;
+    margin: 20px auto 0;
+    padding: 14px 30px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#btnEnviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99,102,241,0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #94a3b8;
+}

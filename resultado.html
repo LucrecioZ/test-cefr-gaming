@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultado - Teste CEFR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styleResultado.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="card">
+
+        <h1>Seu resultado do teste CEFR</h1>
+
+        <p id="resultado" class="score"></p>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="barra"></div>
+        </div>
+
+        <p id="nivel" class="nivel"></p>
+
+        <h2>📊 Tabela de Níveis CEFR</h2>
+
+        <table>
+            <tr>
+                <th>Nível</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>A1/A2</td>
+                <td>Compreende frases básicas e se comunica de forma simples.</td>
+            </tr>
+            <tr>
+                <td>B1</td>
+                <td>Produzir textos simples e descrever experiências</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>Compreender textos mais complexos e argumentos</td>
+            </tr>
+            <tr>
+                <td>C1/C2</td>
+                <td>Alta fluência e domínio avançado do idioma.</td>
+            </tr>
+        </table>
+
+        <p class="info-extra">
+            Obrigado por fazer o teste! Pode refazer ele quantas vezes voce quiser para melhorar seu resultado, e fique a vontade tambem para deixar seu feedback no meu github ou linkedin, isso me ajuda muito a melhorar o projeto.<br> *Obs: segue abaixo a fonte de algumas questões do teste, caso queira conferir ou estudar mais sobre o assunto:<br>
+            https://www.todamateria.com.br/exercicios-de-interpretacao-de-charges-e-tirinhas-em-ingles/<br>
+</p>
+        <a href="index.html" class="botao">Refazer Teste</a>
+
+        <footer>
+            &copy; Teste CEFR - Desenvolvido por Lucas Lourenço.
+        </footer>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let score = parseInt(localStorage.getItem("resultadoFinal")) || 0;
+
+    let resultado = document.getElementById("resultado");
+    let nivel = document.getElementById("nivel");
+    let barra = document.getElementById("barra");
+
+    resultado.textContent = `Você acertou ${score} de 12 questões.`;
+
+    let porcentagem = (score / 12) * 100;
+
+    let corBarra = "";
+
+    if (score <= 4) {
+        nivel.textContent = "Nível A1/A2";
+        corBarra = "#f87171"; // vermelho
+    } 
+    else if (score <= 8) {
+        nivel.textContent = "Nível B1/B2";
+        corBarra = "#fbbf24"; // amarelo
+    } 
+    else {
+        nivel.textContent = "Nível C1/C2";
+        corBarra = "#34d399"; // verde
+    }
+
+    barra.style.background = corBarra;
+
+    setTimeout(() => {
+        barra.style.width = porcentagem + "%";
+
+        barra.textContent = Math.round(porcentagem) + "%";
+        barra.style.display = "flex";
+        barra.style.alignItems = "center";
+        barra.style.justifyContent = "center";
+        barra.style.color = "white";
+        barra.style.fontWeight = "600";
+    }, 200);
+
+});
+</script>
+
+
+
+</body>
+
+
+</html>
