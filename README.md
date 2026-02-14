@@ -68,6 +68,17 @@ Cada nível representa um grau crescente de compreensão, produção e fluência
 - Realizar deploy de projeto utilizando GitHub Pages  
 
 ---
+## 📸 Preview do Projeto
+
+<p align="center">
+  <img src="home.png" width="45%">
+  <img src="teste.png" width="45%">
+</p>
+
+<p align="center">
+  <img src="resultado.png" width="45%">
+</p>
+
 
 ## 👨‍💻 Desenvolvido por
 
