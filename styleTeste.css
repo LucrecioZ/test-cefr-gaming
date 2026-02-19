@@ -89,6 +89,16 @@ input[type="text"]:focus {
     border-color: #6366f1;
 }
 
+.pergunta img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+
+
 #btnEnviar {
     display: block;
     margin: 20px auto 0;
